@@ -1,0 +1,11 @@
+syntax = "proto2";
+package amir_pkg;
+import "google/protobuf/descriptor.proto";
+option go_package = "./message";
+
+
+message KeyMetadata {
+  extend google.protobuf.EnumValueOptions {
+    optional string name = 1208323;
+  }
+}

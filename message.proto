@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package amir_pkg;
+
+import "extension.proto";
+
+option go_package = "./message";
+
+enum Pet {
+  CAT = 0
+    [(amir_pkg.KeyMetadata.name) = "cat"];
+  DOG = 1
+    [(amir_pkg.KeyMetadata.name) = "dog"];
+}
+
+
+enum MediaPlayer {
+  PLEX = 0
+  [(amir_pkg.KeyMetadata.name) = "plx"];
+
+  JELLYFIN = 1
+  [(amir_pkg.KeyMetadata.name) = "notJelly"];
+}
